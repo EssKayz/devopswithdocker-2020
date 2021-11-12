@@ -1,0 +1,10 @@
+CONTAINER ID        IMAGE                                                            COMMAND                  CREATED             STATUS                                    PORTS                                                                      NAMES
+21ca54ae0cd5        dev_airflow                                                     "/entrypoint.sh webs…"   6 days ago          Exited (0) 14 seconds ago                                                                                        airflow
+0ba219e531a7        repo/rabbitmq:dev                                               "docker-entrypoint.s…"   9 days ago          Exited (0) 6 seconds ago                                                                                         _rabbitmq_1
+a2bf02926acb        repo/minio:dev                                                  "/usr/bin/docker-ent…"   9 days ago          Up 7 days                             127.0.0.1:9000->9000/tcp                                                   _minio_1
+28ab5ad13e5e        repo/postgres:dev                                               "/usr/local/sbin/doc…"   9 days ago          Up 7 days                             127.0.0.1:5433->5432/tcp                                                   _postgres_1
+fbb18427d4a8        minio/minio:RELEASE.2020-09-17T04-49-20Z                        "/usr/bin/docker-ent…"   9 days ago          Up 7 days                             0.0.0.0:9001->9000/tcp                                                     airflow-minio
+3908e441dce2        postgres:9.6                                                    "docker-entrypoint.s…"   11 days ago         Up 7 days                             5432/tcp                                                                   _postgres_airflow_1
+d0a276571cfc        dev-migraatio_oracle                                            "/bin/sh -c 'exec $O…"   11 days ago         Up 6 days (healthy)                   0.0.0.0:51521->1521/tcp, 0.0.0.0:55500->5500/tcp, 0.0.0.0:8081->8080/tcp   oracle
+
+

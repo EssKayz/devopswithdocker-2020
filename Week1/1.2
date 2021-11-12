@@ -1,0 +1,18 @@
+harhe@WorkNuke:~/Documents/GitHub/devopswithdocker-2020$ docker images
+REPOSITORY                                                  TAG                            IMAGE ID            CREATED             SIZE
+migraatio_airflow                                           latest                         f8e14cad4905        5 days ago          1.24GB
+nginx                                                       latest                         f35646e83998        5 days ago          133MB
+oraclelinux                                                 7-slim                         03c22334cf5a        4 weeks ago         131MB
+minio/minio                                                 RELEASE.2019-10-12T01-39-57Z   67fec10c1e88        12 months ago       51MB
+rabbitmq                                                    3.7.17-alpine                  a688f1e64402        13 months ago       99.8MB
+postgres                                                    9.6                            22280012ef4a        3 weeks ago         200MB
+
+
+docker ps -a
+CONTAINER ID        IMAGE                                                            COMMAND                  CREATED             STATUS                   PORTS                                                                      NAMES
+96349715190a        migraatio_airflow                                                "/entrypoint.sh webs…"   3 minutes ago       Up 3 minutes             5555/tcp, 8793/tcp, 0.0.0.0:8080->8080/tcp                                 airflow
+13a62c01aabe        nginx                                                            "/docker-entrypoint.…"   7 minutes ago       Up 7 minutes             80/tcp                                                                     admiring_rosalind
+3908e441dce2        postgres:9.6                                                     "docker-entrypoint.s…"   3 weeks ago         Up 3 minutes             5432/tcp                                                                   migraatio_postgres_airflow_1
+d0a276571cfc        migraatio_oracle                                                 "/bin/sh -c 'exec $O…"   3 weeks ago         Up 3 minutes (healthy)   0.0.0.0:51521->1521/tcp, 0.0.0.0:55500->5500/tcp, 0.0.0.0:8081->8080/tcp   oracle
+a2bf02926acb        dev/minio:dev                                                    "/usr/bin/docker-ent…"   2 weeks ago         Up 7 minutes             127.0.0.1:9000->9000/tcp                                                   migraatio_minio_1
+0ba219e531a7        dev/rabbitmq:dev                                                 "docker-entrypoint.s…"   2 weeks ago         Up 7 minutes             4369/tcp, 5671/tcp, 25672/tcp, 127.0.0.1:5672->5672/tcp                    migraatio_rabbitmq_1
